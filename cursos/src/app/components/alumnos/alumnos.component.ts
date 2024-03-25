@@ -22,5 +22,14 @@ export class AlumnosComponent implements OnInit {
     });
   }
 
+  eliminar(alumno: Alumno): void {
+    
+    if(confirm(`seguro que desea eliminar a ${alumno.nombre} ?`)){
+      this.alumnoService.eliminar(alumno.id).subscribe(()=>{
+          this.alumnos = this.alumnos.filter(a => a !==alumno)
+          alert(`alumno ${alumno.nombre} eliminado con exito`)
+      })
+    }
 
+  }
 }

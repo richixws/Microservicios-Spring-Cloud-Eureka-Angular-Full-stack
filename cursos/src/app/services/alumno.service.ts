@@ -29,7 +29,7 @@ export class AlumnoService {
 
   //listar alumno por id
   public ver(id:number):Observable<Alumno>{
-    return this.http.get(this.baseEndpoint+"/id").pipe(
+    return this.http.get(this.baseEndpoint+id).pipe(
       map(alumno=> alumno as Alumno)
     );
   }
