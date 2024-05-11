@@ -31,7 +31,7 @@ import com.developer.pe.service.AlumnoService;
 public class AlumnoController extends CommonController<Alumno,AlumnoService>{
 
 	
-	@PutMapping("/{id}")
+	@PutMapping("{id}")	
 	public ResponseEntity<?> updateAlumno(@Valid @RequestBody Alumno alumno, BindingResult result,@PathVariable("id") Long id){
 		
 		if(result.hasErrors()) {
