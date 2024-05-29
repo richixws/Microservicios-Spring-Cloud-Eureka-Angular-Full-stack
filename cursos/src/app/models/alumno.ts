@@ -1,6 +1,7 @@
 import { Examen } from "./examen";
+import { Generic } from "./generic";
 
-export class Alumno {
+export class Alumno  implements Generic{
 
     id!:number;
     nombre!:string;
